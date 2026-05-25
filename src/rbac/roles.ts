@@ -1,5 +1,0 @@
-export const ROLES = {
-  OWNER: "OWNER",
-  ADMIN: "ADMIN",
-  ACCOUNT_MANAGER: "ACCOUNT_MANAGER",
-};

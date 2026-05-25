@@ -93,11 +93,11 @@ const WhyChooseUs = () => {
                                     ["Next Actions", "You figure it out", "AI recommended"],
                                     ["Setup Time", "Days to weeks", "5 minutes"],
                                 ].map(([feature, traditional, ours], i) => (
-                                    <>
+                                    <div key={i}>
                                         <div key={`f-${i}`} className="p-4 border-b border-r border-border text-sm text-foreground">{feature}</div>
                                         <div key={`o-${i}`} className="p-4 border-b border-border text-sm font-medium text-primary bg-primary/5">{ours}</div>
                                         <div key={`t-${i}`} className="p-4 border-b border-r border-border text-sm text-muted-foreground">{traditional}</div>
-                                    </>
+                                    </div>
                                 ))}
                             </div>
                         </div>

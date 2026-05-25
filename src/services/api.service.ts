@@ -6,7 +6,6 @@ import axios, {
   type InternalAxiosRequestConfig,
 } from "axios";
 
-import { COOKIES_STORAGE } from "@/constants";
 import { CookieUtils } from "@/utils/cookie-storage.utils";
 import type {
   ApiError,
@@ -55,7 +54,7 @@ class ApiService {
   private handleRequest(
     config: InternalAxiosRequestConfig,
   ): InternalAxiosRequestConfig {
-    const token = CookieUtils.getItem(COOKIES_STORAGE.auth_token);
+    const token = "";
 
     if (token && this.requiresAuth(config)) {
       config.headers.Authorization = `Bearer ${token}`;

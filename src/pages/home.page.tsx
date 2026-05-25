@@ -64,7 +64,6 @@ export function HomePage() {
 
   return (
     <div className="w-full min-h-screen bg-white overflow-x-hidden flex flex-col justify-start items-center">
-      <Header />
 
       <div className="relative flex flex-col justify-start items-center w-full">
         {/* Hero Section */}
@@ -377,8 +376,6 @@ export function HomePage() {
         {/* Contact Section */}
         <ContactForm />
 
-        {/* Footer Section */}
-        <FooterSection />
       </div>
     </div>
   );

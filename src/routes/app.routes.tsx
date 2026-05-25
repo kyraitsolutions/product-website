@@ -1,9 +1,7 @@
-import { AppLayout, RootLayout } from "@/layouts";
+import { RootLayout } from "@/layouts";
 import {
-  AuthCallbackPage,
   HomePage,
   LoginPage,
-  OnBoardingPage,
   RegisterPage,
 } from "@/pages";
 import PricingPage from "@/pages/pricing.page";
@@ -11,23 +9,13 @@ import PrivacyPolicyPage from "@/pages/privacy.page";
 import TermsPage from "@/pages/terms.page";
 import { createBrowserRouter } from "react-router-dom";
 // import { builderRoutes } from "./builder.routes";
-import { dashboardRoutes } from "./dashboard.routes";
-import { formRoutes } from "./form.routes";
-import { leadRoutes } from "./lead.route";
 // import ProductPage from "@/pages/product.page";
 // import About from "@/pages/about.page";
 
-import { broadcastRoutes } from "./broadcast.routes";
-import { contactRoutes } from "./contact.routes";
-import { settingRoutes } from "./setting.routes";
-import { PublicOnly } from "./route-access/PublicOnly";
-import { ProtectedOnly } from "./route-access/ProtectedOnly";
-import Teams from "@/pages/UsersAndControl/teams2.page";
-import { liveChatRoutes } from "./livechat.routes";
-import { chatBotRoutes } from "@/rbac/chat-bot.routes";
-import LeadCentrePage from "@/components/website/Product/leadCentre.page";
-import WebsiteChatbotPage from "@/components/website/Product/websiteChatbot.page";
-import AiChatbotPage from "@/components/website/Product/aiChatbot.page";
+import About from "@/pages/about.page";
+import LeadCentrePage from "@/pages/Product/leadCentre.page";
+import WebsiteChatbotPage from "@/pages/Product/websiteChatbot.page";
+import AiChatbotPage from "@/pages/Product/aiChatbot.page";
 
 export const appRoutes = createBrowserRouter([
   {
@@ -37,6 +25,10 @@ export const appRoutes = createBrowserRouter([
       {
         element: <HomePage />,
         index: true,
+      },
+      {
+        element: <About />,
+        path: '/about',
       },
       { path: "/product/lead-centre", element: <LeadCentrePage /> },
       { path: "/product/website-chatbot", element: <WebsiteChatbotPage /> },
@@ -61,47 +53,13 @@ export const appRoutes = createBrowserRouter([
       },
 
       // Auth PUBLIC ONLY (not logged in)
-      {
-        element: <PublicOnly />,
-        children: [
-          { path: "/login", element: <LoginPage /> },
-          { path: "/register", element: <RegisterPage /> },
-        ],
-      },
-
-      //PROTECTED (logged in)
-      {
-        element: <ProtectedOnly />,
-        children: [
-          {
-            element: <AppLayout />,
-            children: [
-              ...dashboardRoutes,
-              // ...builderRoutes,
-              ...liveChatRoutes,
-              ...chatBotRoutes,
-              ...leadRoutes,
-              ...formRoutes,
-              ...broadcastRoutes,
-              ...contactRoutes,
-              ...settingRoutes,
-
-              {
-                path: "/teams",
-                element: <Teams />,
-              },
-            ],
-          },
-          {
-            path: "/on-boarding",
-            element: <OnBoardingPage />,
-          },
-        ],
-      },
-      {
-        path: "/auth/callback",
-        element: <AuthCallbackPage />,
-      },
+      // {
+      //   element: <PublicOnly />,
+      //   children: [
+      //     { path: "/login", element: <LoginPage /> },
+      //     { path: "/register", element: <RegisterPage /> },
+      //   ],
+      // },
     ],
   },
 ]);

@@ -1,9 +1,7 @@
-import FooterSection from "@/components/footer-section";
 import AboutCTA from "@/components/website/AboutCTA";
 import AboutHero from "@/components/website/AboutHero";
 // import CompanyJourney from "@/components/website/CompanyJourney";
 import ContactForm from "@/components/website/ContactForm";
-import Header from "@/components/website/Header";
 import MissionVision from "@/components/website/MissionVision";
 import Problem from "@/components/website/Problem";
 import ProductPrinciples from "@/components/website/ProductPrinciples";
@@ -14,7 +12,6 @@ import WhyChooseUs from "@/components/website/WhyChooseUs";
 const About = () => {
     return (
         <div>
-            <Header />
             <AboutHero />
             <MissionVision />
             <Problem />
@@ -26,7 +23,6 @@ const About = () => {
             {/* <TestimonialsSection /> */}
             <AboutCTA />
             <ContactForm />
-            <FooterSection />
         </div>
     )
 }

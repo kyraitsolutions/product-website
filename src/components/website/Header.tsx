@@ -2,19 +2,13 @@ import { cn } from "@/lib/utils";
 import {
     MessageSquare,
     Bot,
-    Megaphone,
-    CreditCard,
     FileText,
     Link2,
-    BadgeCheck,
-    ShoppingBag,
     User,
     Sparkles,
     Radio,
     Workflow,
     LayoutGrid,
-    Globe,
-    MousePointerClick,
     ChevronDown,
     Brain,
     Webhook,
@@ -52,8 +46,8 @@ const featureItems = [
 ];
 const Header = () => {
     return (
-        <nav className="w-full border-b-2 border-gray-200 bg-white sticky top-0 z-50">
-            <div className="max-w-370 mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="w-full border-b border-gray-200 bg-white sticky top-0 z-50">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <div className="flex items-center space-x-8">
@@ -73,10 +67,10 @@ const Header = () => {
                         {/* Navigation Links */}
                         <div className="hidden md:flex items-center space-x-6">
 
-                            {/* <Link to="/about" className="text-gray-700 hover:text-primary text-sm font-medium transition-colors">
+                            <Link to="/about" className="text-gray-700 hover:text-primary text-sm font-medium transition-colors">
                                 About
                             </Link>
-                            <Link to="/product" className="text-gray-700 hover:text-primary text-sm font-medium transition-colors">
+                            {/* <Link to="/product" className="text-gray-700 hover:text-primary text-sm font-medium transition-colors">
                                 Product
                             </Link> */}
 
