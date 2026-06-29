@@ -1,5 +1,3 @@
-import FooterSection from "@/components/footer-section"
-import Header from "@/components/website/Header"
 
 const privacyPolicyContent = {
     title: "Privacy Policy",
