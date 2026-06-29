@@ -1,7 +1,5 @@
-import { LeadService } from "@/services/lead.service";
 import { CheckCircle, Clock, Flame, IndianRupee, RefreshCw, Sparkles } from "lucide-react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 
 
 interface AILeadSummaryType {
@@ -18,9 +16,7 @@ interface AILeadSummaryProps {
 
 const AILeadSummary = ({ leadId }: AILeadSummaryProps) => {
     // console.log("here is the id", leadId);
-    const { accountId } = useParams();
-    const leadService = new LeadService();
-    const [aiSummary, setAiSummary] = useState<AILeadSummaryType | null>(null);
+    const [aiSummary] = useState<AILeadSummaryType | null>(null);
     const [loading, setLoading] = useState(false)
 
 
@@ -28,8 +24,8 @@ const AILeadSummary = ({ leadId }: AILeadSummaryProps) => {
         console.log(leadId)
         try {
             setLoading(true)
-            const res = await leadService.getLeadSummary(String(accountId), leadId)
-            setAiSummary(res.data.data);
+            // const res = await leadService.getLeadSummary(String(accountId), leadId)
+            // setAiSummary(res.data.data);
         } catch (error) {
             console.log(error);
         } finally {

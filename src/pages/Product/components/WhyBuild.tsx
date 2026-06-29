@@ -31,7 +31,7 @@ const WhyBuild = ({ whyBuildData }: { whyBuildData: WhyBuildData }) => {
                                 className="text-center px-4"
                             >
                                 <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-primary/10 flex items-center justify-center">
-                                    <Icon className="w-7 h-7 text-primary" />
+                                    <Icon />
                                 </div>
                                 <h3 className="text-lg font-bold text-foreground mb-3">
                                     {feature?.title}

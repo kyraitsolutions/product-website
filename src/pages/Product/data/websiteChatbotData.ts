@@ -1,4 +1,4 @@
-import { MessageSquare, DollarSign, Clock, Zap, MousePointerClick, Sparkles, Settings, Save, Target, Brain, FileUp, Upload, Database, Bot, Rocket } from "lucide-react";
+import { MessageSquare, DollarSign, Clock, Zap, MousePointerClick, Sparkles, Save, Target, Brain, FileUp, Upload, Database, Bot, Rocket } from "lucide-react";
 
 
 export interface HeroData
@@ -37,11 +37,11 @@ export interface FeatureSplitData {
 }
 
 export interface HowItWorksSteps {
-    number: string;
-    title: string;
+    number?: string;
+    title?: string;
     description: string;
     cta?: string;
-    icon: React.ComponentType;
+    icon?: React.ComponentType;
 }
 export interface WebsiteChatbotData {
     heroData: HeroData; 

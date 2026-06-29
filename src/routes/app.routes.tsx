@@ -1,8 +1,6 @@
 import { RootLayout } from "@/layouts";
 import {
   HomePage,
-  LoginPage,
-  RegisterPage,
 } from "@/pages";
 import PricingPage from "@/pages/pricing.page";
 import PrivacyPolicyPage from "@/pages/privacy.page";

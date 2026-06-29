@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ImageIcon } from "lucide-react";
 import type { HowItWorksSteps } from "../data/websiteChatbotData";
-const WorkCard = ({ data }: { data: HowItWorksSteps }) => {
+const WorkCard = ({ data }: { data: HowItWorksSteps[] }) => {
     return (
         <section className="py-20 bg-background">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,7 +49,7 @@ const WorkCard = ({ data }: { data: HowItWorksSteps }) => {
                                     </div>
                                     <div className="flex items-center gap-3 mb-3">
                                         <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                                            <Icon className="w-5 h-5 text-primary" />
+                                            {Icon && <Icon />}
                                         </div>
                                         <h3 className="text-2xl font-bold text-foreground">
                                             {step?.title}

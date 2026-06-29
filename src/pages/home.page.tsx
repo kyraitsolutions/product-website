@@ -2,10 +2,8 @@ import { ArrowRight, MessageSquare, Sparkles, TrendingUp } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import CTASection from "../components/cta-section";
 import FAQSection from "../components/faq-section";
-import FooterSection from "../components/footer-section";
 // import DashboardImage2 from "../assets/image2.png";
 import ContactForm from "@/components/website/ContactForm";
-import Header from "@/components/website/Header";
 import PricingSection from "@/components/website/pricing-section";
 // import DashboardImage4 from "../assets/image4.png";
 import ComparisonSection from "@/components/website/ComparisonSection";
@@ -75,10 +73,10 @@ export function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#15803D]/20 border border-border mb-8"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-border mb-8"
               >
                 <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium text-foreground">
+                <span className="text-sm font-medium text-primary">
                   AI-Powered Lead Intelligence
                 </span>
               </motion.div>
@@ -132,10 +130,10 @@ export function HomePage() {
                     onClick={() => {
                       CookieUtils.clear();
                       window.location.href =
-                        // "https://crm-backend-7lf9.onrender.com/api/auth/google";
-                        "http://localhost:3000/api/auth/google";
+                        "https://crm-backend-7lf9.onrender.com/api/auth/google";
+                      // "http://localhost:3000/api/auth/google";
                     }}
-                    className="bg-[#16A34A] hover:bg-[#15803D] text-white cursor-pointer font-semibold px-8 py-3 rounded-lg transition-colors flex items-center gap-2"
+                    className="bg-primary hover:bg-primary/90 text-white cursor-pointer font-semibold px-8 py-3 rounded-lg transition-colors flex items-center gap-2"
                   >
                     Try Kyra for FREE <ArrowRight size={18} />
                   </button>

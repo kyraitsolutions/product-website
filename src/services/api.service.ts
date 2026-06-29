@@ -6,7 +6,6 @@ import axios, {
   type InternalAxiosRequestConfig,
 } from "axios";
 
-import { CookieUtils } from "@/utils/cookie-storage.utils";
 import type {
   ApiError,
   ApiResponse,

@@ -1,24 +1,5 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../ui/table";
 
-const leads = [
-    {
-        name: "Christopher Maclead",
-        company: "Rangoni Of Florence",
-        email: "christopher@email.com",
-        phone: "555-555-5555",
-        source: "Cold Call",
-        owner: "Abhijeet Singh",
-    },
-    {
-        name: "Carissa Kidman",
-        company: "Oh My Goodknits Inc",
-        email: "carissa@email.com",
-        phone: "555-555-5555",
-        source: "Advertisement",
-        owner: "Abhijeet Singh",
-    },
-];
-
 export default function StickyTable() {
     return (
         <div className="p-4 w-full! overflow-auto!">

@@ -8,6 +8,7 @@ export class UserprofileService extends ApiService {
   }
 
   async getUserProfileById(id: string): Promise<ApiResponse<any>> {
+    console.log(id)
     return await this.get("/user/profile");
   }
 }

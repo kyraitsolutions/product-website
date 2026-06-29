@@ -171,7 +171,7 @@ function PricingCard({
         <button
           className={`w-full py-3 mb-8 rounded-[10px] font-semibold transition
           ${featured
-              ? "bg-primary text-white hover:bg-[#15803D] cursor-pointer"
+              ? "bg-primary text-white hover:bg-primary/90 cursor-pointer"
               : "bg-white border-2 border-gray-600 text-gray-600 hover:shadow-md cursor-pointer"
             }`}
         >
