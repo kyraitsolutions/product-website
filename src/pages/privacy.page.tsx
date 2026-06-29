@@ -67,7 +67,7 @@ const privacyPolicyContent = {
 const PrivacyPolicyPage = () => {
     return (
         <div className="min-h-screen flex flex-col bg-background text-foreground">
-            <Header />
+            {/* <Header /> */}
 
             <main className="flex-1">
                 <section className="max-w-[1480px] mx-auto px-8 py-14">
@@ -122,7 +122,7 @@ const PrivacyPolicyPage = () => {
                 </section>
             </main>
 
-            <FooterSection />
+            {/* <FooterSection /> */}
         </div>
     )
 }

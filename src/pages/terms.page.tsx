@@ -1,10 +1,8 @@
-import FooterSection from "@/components/footer-section";
-import Header from "@/components/website/Header";
 
 const TermsPage = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
-      <Header />
+      {/* <Header /> */}
 
       {/* Content */}
       <main className="flex-1">
@@ -110,7 +108,7 @@ const TermsPage = () => {
         </section>
       </main>
 
-      <FooterSection />
+      {/* <FooterSection /> */}
     </div>
   );
 };
