@@ -21,8 +21,38 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const token = "webhook_6943392a39813a85a44ae15676e570ec63021e124a1ad35e228eaf0511474af1";
+  const handleSubmit = async (e: React.FormEvent) => {
+
     e.preventDefault();
+    try {
+      const response = await fetch("https://crm-backend-7lf9.onrender.com/api/webhook/6a42922371e7bd775b43ccb7/lead", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          "name": formData.name,
+          "email": formData.email,
+          "phone": formData.phone,
+          "message": "Interested in your service",
+          "mobile": "",
+          "description": "",
+          "company": "",
+          "title": "",
+          "website": "",
+          "customFields": {
+            "service": formData.service
+          }
+        })
+      });
+
+      const responseData = await response.json();
+      console.log(responseData)
+    } catch (error) {
+
+    }
     console.log(formData);
     setSubmitted(true);
   };
