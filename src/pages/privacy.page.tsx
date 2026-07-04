@@ -70,7 +70,7 @@ const PrivacyPolicyPage = () => {
             <main className="flex-1">
                 <section className="max-w-[1480px] mx-auto px-8 py-14">
                     {/* Title */}
-                    <h1 className="text-4xl font-bold mb-3">
+                    <h1 className="text-3xl font-bold mb-3">
                         {privacyPolicyContent.title}
                     </h1>
 

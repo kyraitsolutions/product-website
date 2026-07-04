@@ -14,20 +14,21 @@ import About from "@/pages/about.page";
 import LeadCentrePage from "@/pages/Product/leadCentre.page";
 import WebsiteChatbotPage from "@/pages/Product/websiteChatbot.page";
 import AiChatbotPage from "@/pages/Product/aiChatbot.page";
+import TrustCenterPage from "@/pages/TrustCenter/trustcenter.page";
+import CookiePolicy from "@/pages/Legal/data/Cookies";
+import NotFoundPage from "@/pages/notfound.page";
+import Careers from "@/pages/Career/career.page";
+import Contact from "@/pages/Contact/contact.page";
+import Team from "@/pages/Team/team.page";
 
 export const appRoutes = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <NotFoundPage />,
     children: [
-      {
-        element: <HomePage />,
-        index: true,
-      },
-      {
-        element: <About />,
-        path: '/about',
-      },
+      { element: <HomePage />, index: true },
+      { path: '/about', element: <About /> },
       { path: "/product/lead-centre", element: <LeadCentrePage /> },
       { path: "/product/website-chatbot", element: <WebsiteChatbotPage /> },
       { path: "/product/ai-chatbot", element: <AiChatbotPage /> },
@@ -37,18 +38,16 @@ export const appRoutes = createBrowserRouter([
       { path: "/product/email-marketing", element: <LeadCentrePage /> },
       { path: "/product/whatsapp-forms", element: <LeadCentrePage /> },
       { path: "/product/whatsapp-link-qr", element: <LeadCentrePage /> },
-      {
-        element: <PricingPage />,
-        path: "/pricing",
-      },
-      {
-        element: <TermsPage />,
-        path: "/terms",
-      },
-      {
-        element: <PrivacyPolicyPage />,
-        path: "/privacy-policy",
-      },
+      { path: "/product/whatsapp-link-qr", element: <LeadCentrePage /> },
+      { path: "/pricing", element: <PricingPage /> },
+      { path: "/terms", element: <TermsPage /> },
+      { path: "/privacy-policy", element: <PrivacyPolicyPage /> },
+      { path: "/trust-and-security", element: <TrustCenterPage /> },
+      { path: "/cookies", element: <CookiePolicy /> },
+      { path: "/careers", element: <Careers /> },
+      { path: "/contact", element: <Contact /> },
+      { path: "/team", element: <Team /> },
+
 
       // Auth PUBLIC ONLY (not logged in)
       // {
@@ -58,6 +57,11 @@ export const appRoutes = createBrowserRouter([
       //     { path: "/register", element: <RegisterPage /> },
       //   ],
       // },
+
     ],
+  },
+  {
+    path: "*",
+    element: <NotFoundPage />,
   },
 ]);

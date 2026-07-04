@@ -66,14 +66,14 @@ export function HomePage() {
       <div className="relative flex flex-col justify-start items-center w-full">
         {/* Hero Section */}
 
-        <section className="w-full bg-[linear-gradient(180deg,hsl(142_30%_97%)_0%,hsl(0_0%_100%)_100%)]">
+        <section className="w-full bg-gradient-to-br from-primary/10 via-transparent to-primary/5">
           <div className="max-w-370 mx-auto w-full py-16 sm:py-20 md:py-24 lg:py-24   overflow-hidden relative">
             <div className="flex justify-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-border mb-8"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 mb-8"
               >
                 <Sparkles className="w-4 h-4 text-primary" />
                 <span className="text-sm font-medium text-primary">

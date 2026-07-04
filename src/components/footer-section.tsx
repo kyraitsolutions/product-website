@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function FooterSection() {
   return (
-    <footer className="w-full bg-primary border-t border-gray-200">
+    <footer className="w-full bg-slate-900 border-t border-gray-200">
       <div className="max-w-370 mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
         {/* Top Section */}
@@ -37,7 +37,7 @@ export default function FooterSection() {
           </div>
 
           {/* Links */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 lg:col-span-3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:col-span-3">
 
             {/* Product */}
             <div>
@@ -45,10 +45,10 @@ export default function FooterSection() {
                 Product
               </h4>
               <ul className="space-y-3 text-sm text-gray-600">
-                <li><Link to="#" className="text-gray-200">Features</Link></li>
-                <li><Link to="#pricing" className="text-gray-200">Pricing</Link></li>
-                <li><Link to="#" className="text-gray-200">Integrations</Link></li>
-                <li><Link to="#" className="text-gray-200">Live Preview</Link></li>
+                <li><Link to="/features" className="text-gray-200">Features</Link></li>
+                <li><Link to="/pricing" className="text-gray-200">Pricing</Link></li>
+                {/* <li><Link to="/integrations" className="text-gray-200">Integrations</Link></li> */}
+                {/* <li><Link to="/live-preview" className="text-gray-200">Live Preview</Link></li> */}
               </ul>
             </div>
 
@@ -59,9 +59,9 @@ export default function FooterSection() {
               </h4>
               <ul className="space-y-3 text-sm text-gray-600">
                 <li><Link to="/about" className="text-gray-200">About</Link></li>
-                <li><Link to="#" className="text-gray-200">Team</Link></li>
-                <li><Link to="#" className="text-gray-200">Careers</Link></li>
-                <li><Link to="#" className="text-gray-200">Contact</Link></li>
+                <li><Link to="/team" className="text-gray-200">Team</Link></li>
+                <li><Link to="/careers" className="text-gray-200">Careers</Link></li>
+                <li><Link to="/contact" className="text-gray-200">Contact</Link></li>
               </ul>
             </div>
 
@@ -71,10 +71,21 @@ export default function FooterSection() {
                 Resources
               </h4>
               <ul className="space-y-3 text-sm text-gray-600">
-                <li><Link to="#" className="text-gray-200">Documentation</Link></li>
-                <li><Link to="#" className="text-gray-200">API Reference</Link></li>
-                <li><Link to="#" className="text-gray-200">Community</Link></li>
-                <li><Link to="#" className="text-gray-200">Support</Link></li>
+                <li><Link to="/documentation" className="text-gray-200">Documentation</Link></li>
+                <li><Link to="/api-reference" className="text-gray-200">API Reference</Link></li>
+                <li><Link to="/community" className="text-gray-200">Community</Link></li>
+                <li><Link to="/support" className="text-gray-200">Support</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-white mb-4">
+                Trust & Security
+              </h4>
+              <ul className="space-y-3 text-sm text-gray-600">
+                <li><Link to="/trust-and-security" className="text-gray-200">Security</Link></li>
+                <li><Link to="/cookies" className="text-gray-200">Cookies</Link></li>
+                <li><Link to="/privacy-policy" className="text-gray-200">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="text-gray-200">Terms of Service</Link></li>
               </ul>
             </div>
 

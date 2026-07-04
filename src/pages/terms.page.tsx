@@ -8,7 +8,7 @@ const TermsPage = () => {
       <main className="flex-1">
         <section className="max-w-370 mx-auto px-8 py-14">
           {/* Title */}
-          <h1 className="text-4xl font-bold mb-3">Terms & Conditions</h1>
+          <h1 className="text-3xl font-bold mb-3">Terms & Conditions</h1>
 
           <p className="text-sm text-muted-foreground mb-10">
             Last updated: 27 January, 2024
