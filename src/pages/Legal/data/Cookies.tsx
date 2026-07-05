@@ -24,7 +24,7 @@ const CookiePolicy = () => {
                 </div>
             </section>
 
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 px-6 py-16">
+            <div className="md:max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 px-6 py-16">
 
                 {/* Sidebar */}
                 <aside className="hidden lg:block lg:col-span-3">
@@ -83,7 +83,7 @@ const CookiePolicy = () => {
                             )}
 
                             {section.table && (
-                                <div className="overflow-auto rounded-xl border mt-8">
+                                <div className="w-full! overflow-auto rounded-xl border mt-8 border">
 
                                     <table className="w-full border-collapse">
 
@@ -93,7 +93,7 @@ const CookiePolicy = () => {
                                                 {section.table.headers.map((header) => (
                                                     <th
                                                         key={header}
-                                                        className="text-left px-5 py-4"
+                                                        className="text-left px-2 md:px-5 py-4 max-md:text-sm"
                                                     >
                                                         {header}
                                                     </th>
@@ -112,7 +112,7 @@ const CookiePolicy = () => {
                                                     {row.map((cell, i) => (
                                                         <td
                                                             key={i}
-                                                            className="px-5 py-4"
+                                                            className="px-2 md:px-5 py-4 max-md:text-sm"
                                                         >
                                                             {cell}
                                                         </td>

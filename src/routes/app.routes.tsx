@@ -20,6 +20,7 @@ import NotFoundPage from "@/pages/notfound.page";
 import Careers from "@/pages/Career/career.page";
 import Contact from "@/pages/Contact/contact.page";
 import Team from "@/pages/Team/team.page";
+import JobDetails from "@/pages/Career/job-details";
 
 export const appRoutes = createBrowserRouter([
   {
@@ -45,6 +46,7 @@ export const appRoutes = createBrowserRouter([
       { path: "/trust-and-security", element: <TrustCenterPage /> },
       { path: "/cookies", element: <CookiePolicy /> },
       { path: "/careers", element: <Careers /> },
+      { path: "/careers/:jobId", element: <JobDetails /> },
       { path: "/contact", element: <Contact /> },
       { path: "/team", element: <Team /> },
 

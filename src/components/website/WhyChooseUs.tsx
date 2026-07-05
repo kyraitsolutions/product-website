@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Brain, DollarSign, Zap, Shield } from "lucide-react";
+import React from "react";
 
 const differentiators = [
     {
@@ -55,7 +56,7 @@ const WhyChooseUs = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-card rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+                                className="rounded-xl p-6 border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
                             >
                                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                                     <item.icon className="w-6 h-6 text-primary" />
@@ -74,16 +75,25 @@ const WhyChooseUs = () => {
                         transition={{ duration: 0.5, delay: 0.4 }}
                         className="mt-12"
                     >
-                        <div className="bg-card rounded-2xl border border-border overflow-hidden">
-                            <div className="grid grid-cols-3 text-center">
+                        <div className="rounded-xl overflow-hidden">
+                            <div className="grid grid-cols-3 text-center rounded-xl overflow-hidden border">
+                                {/* Header */}
                                 <div className="p-4 border-b border-r border-border bg-muted/30">
-                                    <span className="text-sm font-medium text-muted-foreground">Feature</span>
+                                    <span className="text-sm font-medium text-muted-foreground">
+                                        Feature
+                                    </span>
                                 </div>
-                                <div className="p-4 border-b border-r border-border  bg-primary/5" >
-                                    <span className="text-sm font-semibold text-primary">Kyra AI CRM</span>
+
+                                <div className="p-4 border-b border-r border-border bg-primary/5">
+                                    <span className="text-sm font-semibold text-primary">
+                                        Kyra AI CRM
+                                    </span>
                                 </div>
+
                                 <div className="p-4 border-b border-border bg-muted/30">
-                                    <span className="text-sm font-medium text-muted-foreground">Traditional CRM</span>
+                                    <span className="text-sm font-medium text-muted-foreground">
+                                        Traditional CRM
+                                    </span>
                                 </div>
 
                                 {[
@@ -91,13 +101,21 @@ const WhyChooseUs = () => {
                                     ["Qualification", "Manual scoring", "Automatic AI"],
                                     ["Lead Context", "Basic fields", "Full conversation + AI summary"],
                                     ["Next Actions", "You figure it out", "AI recommended"],
-                                    ["Setup Time", "Days to weeks", "5 minutes"],
+                                    ["Setup Time", "Days to weeks", "30 minutes"],
                                 ].map(([feature, traditional, ours], i) => (
-                                    <div key={i}>
-                                        <div key={`f-${i}`} className="p-4 border-b border-r border-border text-sm text-foreground">{feature}</div>
-                                        <div key={`o-${i}`} className="p-4 border-b border-border text-sm font-medium text-primary bg-primary/5">{ours}</div>
-                                        <div key={`t-${i}`} className="p-4 border-b border-r border-border text-sm text-muted-foreground">{traditional}</div>
-                                    </div>
+                                    <React.Fragment key={i}>
+                                        <div className="p-4 border-b border-r border-border text-sm font-medium">
+                                            {feature}
+                                        </div>
+
+                                        <div className="p-4 border-b border-r border-border bg-primary/5 text-sm font-semibold text-primary">
+                                            {ours}
+                                        </div>
+
+                                        <div className="p-4 border-b border-border text-sm text-muted-foreground">
+                                            {traditional}
+                                        </div>
+                                    </React.Fragment>
                                 ))}
                             </div>
                         </div>

@@ -14,7 +14,8 @@ import {
     Webhook,
 } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from "../ui/button";
 
 
 const productItems = [
@@ -45,8 +46,9 @@ const featureItems = [
     { icon: Webhook, title: "Webhook", desc: "Capture leads from websites" },
 ];
 const Header = () => {
+    const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
     return (
-        <nav className="w-full border-gray-200 bg-white sticky top-0 z-50">
+        <nav className="relative w-full border-gray-200 bg-white sticky top-0 z-50">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
@@ -88,16 +90,16 @@ const Header = () => {
                     </div>
                     {/* CTA Buttons */}
                     <div className="flex items-center gap-3">
-                        <button
+                        <Button
                             onClick={() => {
                                 window.location.href =
                                     "https://crm-backend-7lf9.onrender.com/api/auth/google";
                                 // "http://localhost:3000/api/auth/google";
                             }}
-                            className="text-gray-700 whitespace-nowrap hover:text-gray-900 text-sm font-medium px-4 py-2 rounded-lg  max-md:text-white max-md:bg-[#16A34A]  hover:bg-gray-50 transition-colors"
+                            className="text-gray-700 whitespace-nowrap hover:text-gray-900 text-sm font-medium px-4 py-2 rounded-lg  text-white hover:bg-gray-50 transition-colors"
                         >
                             Login →
-                        </button>
+                        </Button>
                         <button
                             onClick={() => {
                                 window.location.href =
@@ -107,9 +109,32 @@ const Header = () => {
                         >
                             Start for FREE →
                         </button>
+                        <button
+                            onClick={() => setIsMobileNavOpen((prev) => !prev)}
+                            className="md:hidden text-gray-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+                        >
+                            <span className="sr-only">Open main menu</span>
+                            {/* Hamburger icon */}
+                            <svg
+                                className="h-6 w-6"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
+            {isMobileNavOpen && <MobileNav isMobileNavOpen={isMobileNavOpen} setIsMobileNavOpen={setIsMobileNavOpen} />}
         </nav>
     )
 }
@@ -156,4 +181,94 @@ function NavDropdown({
             )}
         </div>
     );
+}
+
+
+
+
+const MobileNav = ({ isMobileNavOpen, setIsMobileNavOpen }: { isMobileNavOpen: boolean; setIsMobileNavOpen: (open: boolean) => void }) => {
+    const navigate = useNavigate();
+    const [openId, setOpenId] = useState<number | null>(null);
+    const navItems = [
+        {
+            label: "Product",
+            items: [
+                { title: "Lead Centre", desc: "Manage, track & organize", path: "/product/lead-centre" },
+                { title: "Website Chatbot", desc: "Flow-based chatbot for websites", path: "/product/website-chatbot" },
+                { title: "AI Website Chatbot", desc: "GPT-powered AI replies", path: "/product/ai-chatbot" },
+                { title: "WhatsApp Chatbots", desc: "Automate WhatsApp conversations", path: "/product/whatsapp-chatbot" },
+                { title: "AI WhatsApp Chatbot", desc: "GPT-powered chatbot", path: "/product/ai-whatsapp-bot" },
+                { title: "WhatsApp Marketing", desc: "Broadcast, Automate & Grow", path: "/product/whatsapp-marketing" },
+                { title: "Email Marketing", desc: "Campaigns, automations & newsletters", path: "/product/email-marketing" },
+                { title: "WhatsApp Forms", desc: "Collect data via WhatsApp", path: "/product/whatsapp-forms" },
+                { title: "WhatsApp Link & QR", desc: "Generate links & QR codes", path: "/product/whatsapp-link-qr" },
+            ],
+        },
+        {
+            label: "Features",
+            items: [
+                { title: "Features Overview", desc: "All features at a glance" },
+                { title: "WhatsApp Broadcasting", desc: "Send bulk messages" },
+                { title: "AI WhatsApp Chatbot", desc: "Smart AI conversations" },
+                { title: "Chatbot Flow Builder", desc: "Visual flow builder" },
+                { title: "Forms", desc: "Data collection forms" },
+                { title: "Webhook", desc: "Capture leads from websites" },
+            ],
+        },
+        {
+            label: "Company",
+            items: [
+                { title: "About", desc: "Learn more about our company", path: "/about" },
+                { title: "Team", desc: "Meet the people behind the scenes", path: "/team" },
+                { title: "Careers", desc: "Join our amazing team", path: "/careers" },
+                { title: "Contact", desc: "Get in touch with us", path: "/contact" },
+            ],
+        },
+        {
+            label: " Resources",
+            items: [
+                { title: "Documentation", desc: "Comprehensive guides and documentation", path: "/documentation" },
+                { title: "API Reference", desc: "Detailed API reference for developers", path: "/api-reference" },
+                { title: "Community", desc: "Join our vibrant community", path: "/community" },
+                { title: "Support", desc: "Get assistance and support", path: "/support" },
+            ],
+        },
+        {
+            label: "Trust & Security",
+            items: [
+                { title: "Trust Center", desc: "Learn about our security practices", path: "/trust-and-security" },
+                { title: "Cookies", desc: "Understand our cookie policy", path: "/cookies" },
+                { title: "Privacy Policy", desc: "Read our privacy policy", path: "/privacy-policy" },
+                { title: "Terms of Service", desc: "Review our terms of service", path: "/terms" },
+            ],
+        },
+    ];
+    if (!isMobileNavOpen) return null;
+    return (
+        <div className="md:hidden overflow-y-auto hide-scrollbar bg-white h-screen fixed top-14 left-0 w-full z-50 px-5 pt-5 pb-18 border-t border-slate-100 shadow-[0_12px_24px_-12px_rgba(15,23,42,0.08)] divide-y divide-slate-100">
+            {
+                navItems.map((navItem, index) => (
+                    <div key={index} className="py-4 first:pt-0">
+                        <h4 onClick={() => setOpenId(openId === index ? null : index)} className="text-sm font-semibold uppercase tracking-widest text-slate-800 mb-3 cursor-pointer select-none flex items-center justify-between hover:text-indigo-600 transition-colors duration-150">
+                            {navItem.label}
+                        </h4>
+                        {/* {openId === index && ( */}
+                        <ul className="space-y-1">
+                            {navItem.items.map((item: any, itemIndex: number) => (
+                                <li key={itemIndex}>
+                                    <button
+                                        onClick={() => { setIsMobileNavOpen(false); navigate(item.path); }}
+                                        className="block px-3 py-2.5 rounded-xl text-sm font-medium text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 active:bg-indigo-100 active:scale-[0.98] transition-all duration-150">
+                                        {item.title}
+                                    </button>
+                                </li>
+                            ))}
+                        </ul>
+                        {/* )} */}
+                    </div>
+                ))
+            }
+        </div>
+
+    )
 }

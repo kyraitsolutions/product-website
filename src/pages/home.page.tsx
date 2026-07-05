@@ -137,7 +137,7 @@ export function HomePage() {
                   >
                     Try Kyra for FREE <ArrowRight size={18} />
                   </button>
-                  <button className="border-2 border-gray-300 hover:border-gray-400 cursor-pointer text-gray-700 font-semibold px-8 py-2.5 rounded-lg transition-colors">
+                  <button className="border cursor-pointer text-gray-700 font-semibold px-8 py-2.5 rounded-lg transition-colors">
                     Join Live Demo →
                   </button>
                 </motion.div>
@@ -257,106 +257,6 @@ export function HomePage() {
         <HowItWork />
         <WhyChooseUs />
         <ComparisonSection />
-
-        {/* Bento Grid Section */}
-        {/* <section className="w-full bg-gray-50 py-20 sm:py-24">
-          <div className="max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div className="text-center mb-16">
-              <Badge
-                icon={
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect x="1" y="1" width="4" height="4" stroke="currentColor" />
-                    <rect x="7" y="1" width="4" height="4" stroke="currentColor" />
-                    <rect x="1" y="7" width="4" height="4" stroke="currentColor" />
-                    <rect x="7" y="7" width="4" height="4" stroke="currentColor" />
-                  </svg>
-                }
-                text="Features"
-              />
-
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-6 mb-4">
-                Built for absolute clarity and focused work
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Stay focused with tools that organize, connect, and turn information
-                into confident decisions.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-              {[
-                {
-                  title: "Smart. Simple. Brilliant.",
-                  desc: "Your data is beautifully organized so you see everything clearly without the clutter.",
-                  component: <SmartSimpleBrilliant theme="light" className="scale-75" />,
-                },
-                {
-                  title: "Your work, in sync",
-                  desc: "Every update flows instantly across your team and keeps collaboration effortless.",
-                  component: <KyraChatbotPreview />,
-                },
-                {
-                  title: "Effortless integration",
-                  desc: "All your favorite tools connect in one place and work together seamlessly.",
-                  component: <EffortlessIntegration className="scale-90" />,
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-white rounded-2xl p-8 hover:shadow-md border border-[#16A34A]/20 transition"
-                >
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 mb-6">{item.desc}</p>
-
-                  <div className="w-full rounded-xl  flex items-center justify-center overflow-hidden">
-                    {item.component}
-                  </div>
-                </div>
-              ))}
-
-              <div className="bg-white h-full rounded-2xl border border-[#16A34A]/20 p-8 hover:shadow-md transition">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Numbers that speak
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Track growth with precision and turn raw data into confident decisions.
-                </p>
-
-                <div className="grid grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <CountUp end={3} suffix="x" />
-                    <p className="text-sm text-gray-500 mt-1">Revenue Growth</p>
-                  </div>
-                  <div>
-                    <CountUp end={92} suffix="%" />
-                    <p className="text-sm text-gray-500 mt-1">Lead Qualification</p>
-                  </div>
-                  <div>
-                    <CountUp end={28} />
-                    <p className="text-sm text-gray-500 mt-1">Active Businesses</p>
-                  </div>
-                  <div>
-                    <CountUp end={50000} suffix="+" />
-                    <p className="text-sm text-gray-500 mt-1">Leads Captured</p>
-                  </div>
-                </div>
-
-                
-              </div>
-
-            </div>
-          </div>
-        </section> */}
 
         {/* Testimonials Section */}
         {/* <div id="review" className="w-full">

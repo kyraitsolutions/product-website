@@ -26,7 +26,7 @@ const problems = [
 
 const Problem = () => {
     return (
-        <section className="pb-20 pt-10 bg-background">
+        <section className="pb-20 pt-20 bg-background">
             <div className="container mx-auto px-4">
                 <div className="max-w-6xl mx-auto">
                     <motion.div
@@ -40,7 +40,7 @@ const Problem = () => {
                             The Problem
                         </span>
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                        Your CRM Is <span className="text-primary">Quietly Killing</span> Your Deals
+                            Your CRM Is <span className="text-primary">Quietly Killing</span> Your Deals
                         </h2>
                         <p className="text-lg text-muted-foreground">
                             Traditional CRMs were built to store data—not to understand your customers or help you sell faster.

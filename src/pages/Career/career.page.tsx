@@ -1,4 +1,6 @@
 import { Briefcase, ArrowRight, Heart, GraduationCap, Users, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
+import { JObDetails } from "./data/jobData";
 
 export default function Careers() {
     const benefits = [
@@ -27,34 +29,6 @@ export default function Careers() {
                 "Build modern SaaS products powered by AI, automation, and cloud technologies.",
         },
     ];
-
-    const openings = [
-        {
-            title: "Frontend Developer",
-            type: "Full Time",
-            location: "Remote / Hybrid",
-            experience: "2-4 Years",
-        },
-        {
-            title: "Backend Developer",
-            type: "Full Time",
-            location: "Remote / Hybrid",
-            experience: "3+ Years",
-        },
-        {
-            title: "UI/UX Designer",
-            type: "Full Time",
-            location: "Remote",
-            experience: "2+ Years",
-        },
-        {
-            title: "DevOps Engineer",
-            type: "Full Time",
-            location: "Hybrid",
-            experience: "3+ Years",
-        },
-    ];
-
     return (
         <main className="bg-background">
             {/* Hero */}
@@ -145,7 +119,7 @@ export default function Careers() {
                 id="openings"
                 className="bg-muted/40 py-20"
             >
-                <div className="max-w-[1400px] mx-auto px-8">
+                <div className="max-w-[1480px] mx-auto px-8">
                     <div className="text-center">
                         <h2 className="text-3xl font-bold">
                             Current Openings
@@ -157,9 +131,10 @@ export default function Careers() {
                     </div>
 
                     <div className="w-full mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-                        {openings.map((job) => (
-                            <div
+                        {JObDetails.map((job) => (
+                            <Link
                                 key={job.title}
+                                to={`/careers/${job.id}`}
                                 className="rounded-xl border bg-background p-6 transition hover:border-primary hover:shadow-lg"
                             >
                                 <div className="flex flex-col gap-6">
@@ -183,12 +158,12 @@ export default function Careers() {
                                         </div>
                                     </div>
 
-                                    <button className="inline-flex  gap-2 rounded-xl bg-primary px-5 py-2 font-medium text-primary-foreground transition hover:opacity-90">
+                                    <button className="flex items-center gap-2 justify-end text-sm font-medium text-primary transition hover:opacity-90">
                                         Apply Now
                                         <ArrowRight size={18} />
                                     </button>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -196,7 +171,7 @@ export default function Careers() {
 
             {/* CTA */}
             <section className="max-w-[1480px] mx-auto px-8 py-24">
-                <div className="rounded-3xl bg-primary px-8 py-16 text-center text-primary-foreground">
+                <div className="flex flex-col items-center rounded-xl bg-primary px-8 py-16 text-center text-primary-foreground">
                     <h2 className="text-3xl font-bold">
                         Don't See the Right Role?
                     </h2>
@@ -206,9 +181,9 @@ export default function Careers() {
                         we'll reach out when a suitable opportunity becomes available.
                     </p>
 
-                    <button className="mt-8 rounded-xl bg-white px-8 py-3 font-semibold text-primary transition hover:scale-105">
+                    <Link to="mailto:kyraitsolutions@gmail.com" target="_blank" className="mt-10 w-fit rounded-xl bg-white px-8 py-3 font-semibold text-primary transition hover:scale-105">
                         Send Your Resume
-                    </button>
+                    </Link>
                 </div>
             </section>
         </main>

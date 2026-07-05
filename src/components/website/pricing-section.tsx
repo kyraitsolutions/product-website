@@ -11,7 +11,7 @@ export default function PricingSection() {
   }
 
   return (
-    <section className="w-full bg-gray-50 py-20 sm:py-24">
+    <section className="w-full bg-muted py-20 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -35,7 +35,7 @@ export default function PricingSection() {
 
         {/* Billing Toggle */}
         <div className="flex justify-center mb-14">
-          <div className="flex items-center gap-2 p-1 bg-white rounded-full shadow-sm border">
+          <div className="flex items-center gap-2 p-1 bg-white rounded-full shadow-sm">
             {["monthly", "annually"].map((type) => (
               <button
                 key={type}
@@ -146,7 +146,7 @@ function PricingCard({
 }: any) {
   return (
     <div
-      className={`rounded-[10px] p-8 flex flex-col border border-gray-300 justify-between shadow-sm transition
+      className={`rounded-xl p-8 flex flex-col justify-between drop-shadow-xl transition
         ${featured
           ? "bg-white scale-[1.02]"
           : "bg-white"

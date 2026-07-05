@@ -125,7 +125,7 @@ export default function FAQSection() {
         </div>
 
         {/* FAQ Card */}
-        <div className=" bg-white rounded-2xl shadow-sm border border-gray-200 divide-y">
+        <div className=" bg-white rounded-xl  border divide-y">
           {faqData.map((item, index) => {
             const isOpen = openItems.includes(index)
 
