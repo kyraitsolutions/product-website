@@ -21,6 +21,7 @@ import Careers from "@/pages/Career/career.page";
 import Contact from "@/pages/Contact/contact.page";
 import Team from "@/pages/Team/team.page";
 import JobDetails from "@/pages/Career/job-details";
+import SalesAgent from "@/pages/SalesAgent/salesagent.page";
 
 export const appRoutes = createBrowserRouter([
   {
@@ -49,6 +50,8 @@ export const appRoutes = createBrowserRouter([
       { path: "/careers/:jobId", element: <JobDetails /> },
       { path: "/contact", element: <Contact /> },
       { path: "/team", element: <Team /> },
+      { path: "/ai-sales-agent", element: <SalesAgent /> },
+
 
 
       // Auth PUBLIC ONLY (not logged in)

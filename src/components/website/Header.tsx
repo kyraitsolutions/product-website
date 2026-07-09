@@ -19,13 +19,14 @@ import { Button } from "../ui/button";
 
 
 const productItems = [
-    { icon: User, title: "Lead Centre", desc: "Manage, track & organize", path: "/product/lead-centre" },
+    // { icon: User, title: "Lead Centre", desc: "Manage, track & organize", path: "/product/lead-centre" },
+    { icon: Brain, title: "AI WhatsApp Chatbot", desc: "GPT-powered chatbot", path: "/product/ai-whatsapp-bot" },
+    { icon: Bot, title: "WhatsApp Chatbots", desc: "Automate WhatsApp conversations", path: "/product/whatsapp-chatbot" },
+    { icon: Brain, title: "AI Sales Agent", desc: "Revenue, sales, call handling", path: "/ai-sales-agent" },
+    { icon: MessageSquare, title: "WhatsApp Marketing", desc: "Broadcast, Automate & Grow", path: "/product/whatsapp-marketing" },
     { icon: MessageSquare, title: "Website Chatbot", desc: "Flow-based chatbot for websites", path: "/product/website-chatbot" },
     { icon: Sparkles, title: "AI Website Chatbot", desc: "GPT-powered AI replies", path: "/product/ai-chatbot" },
     // { icon: Megaphone, title: "AI Ads Manager", desc: "5X your leads" },
-    { icon: Bot, title: "WhatsApp Chatbots", desc: "Automate WhatsApp conversations", path: "/product/whatsapp-chatbot" },
-    { icon: Brain, title: "AI WhatsApp Chatbot", desc: "GPT-powered chatbot", path: "/product/ai-whatsapp-bot" },
-    { icon: MessageSquare, title: "WhatsApp Marketing", desc: "Broadcast, Automate & Grow", path: "/product/whatsapp-marketing" },
     { icon: Radio, title: "Email Marketing", desc: "Campaigns, automations & newsletters", path: "/product/email-marketing" },
 
     // { icon: CreditCard, title: "WhatsApp Payments", desc: "Collect payments in chat" },
