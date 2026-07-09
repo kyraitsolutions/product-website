@@ -22,11 +22,11 @@ export default function SalesAgent() {
 
                     <div className="max-w-3xl">
 
-                        <span className="inline-flex items-center rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-orange-700">
+                        <span className="inline-flex place-items-center items-center rounded-full bg-orange-100 px-4 py-2 text-sm font-semibold text-orange-700">
                             🚀 Coming Soon
                         </span>
 
-                        <h1 className="mt-6 text-5xl font-bold leading-tight text-gray-900">
+                        <h1 className="mt-6 text-3xl md:text-5xl max-md:text-center font-bold leading-tight text-gray-900">
                             AI Sales Agent that
                             <span className="text-primary">
                                 {" "}Answers Calls,
@@ -44,14 +44,14 @@ export default function SalesAgent() {
 
                         {/* Newsletter */}
 
-                        <div className="mt-10 flex max-w-lg rounded-xl border bg-white">
+                        <div className="mt-10 flex md:max-w-lg rounded-xl border bg-white">
 
                             <input
                                 placeholder="Enter your work email"
-                                className="flex-1 rounded-l-xl px-6 py-3 outline-none"
+                                className="flex-1 rounded-l-xl px-3 md:px-6 py-3 outline-none"
                             />
 
-                            <button className="rounded-xl bg-primary px-8 font-semibold text-white hover:opacity-90">
+                            <button className="rounded-xl bg-primary whitespace-nowrap px-3 md:px-8 font-semibold text-white hover:opacity-90">
                                 Notify Me
                             </button>
 
@@ -69,7 +69,7 @@ export default function SalesAgent() {
 
                         <div className="rounded-xl border bg-white p-8 shadow-xl">
 
-                            <Bot className="h-20 w-20 text-primary" />
+                            <Bot className="h-14 w-14 md:h-20 md:w-20 text-primary" />
 
                             <div className="mt-8 space-y-5">
 
@@ -108,7 +108,7 @@ export default function SalesAgent() {
 
                 <div className="text-center">
 
-                    <h2 className="text-4xl font-bold">
+                    <h2 className="text-3xl md:text-4xl font-bold">
                         Why Businesses Love Kyra AI
                     </h2>
 
@@ -198,9 +198,9 @@ export default function SalesAgent() {
 
             {/* CTA */}
 
-            <section className="py-28">
+            <section className="py-28 px-5">
 
-                <div className="mx-auto max-w-4xl rounded-3xl bg-slate-800 px-10 py-10 text-center text-white">
+                <div className="mx-auto max-w-4xl rounded-3xl bg-slate-800 px-5 md:px-10 py-10 text-center text-white">
 
                     <Mail className="mx-auto h-10 w-10" />
 
@@ -212,15 +212,15 @@ export default function SalesAgent() {
                         Be among the first businesses to experience AI-powered voice sales.
                     </p>
 
-                    <div className="mx-auto mt-10 flex max-w-xl rounded-xl bg-white">
+                    <div className="mt-10 flex mx-auto md:max-w-xl rounded-xl bg-white">
 
                         <input
-                            className="flex-1 rounded-xl px-5 py-3 text-black outline-none"
+                            className="flex-1 rounded-xl px-3 md:px-5 py-3 text-black outline-none"
                             placeholder="Your work email"
                         />
 
-                        <button className="flex items-center gap-2 rounded-xl bg-primary px-8 py-1 font-semibold text-white">
-                            Notify Me
+                        <button className="flex items-center gap-2  whitespace-nowrap rounded-xl bg-primary px-5 md:px-8 py-1 font-semibold text-white">
+                            <span className="hidden md:block">Notify Me</span>
                             <ArrowRight size={18} />
                         </button>
 
