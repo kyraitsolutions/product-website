@@ -4,7 +4,6 @@ import {
     Bot,
     FileText,
     Link2,
-    User,
     Sparkles,
     Radio,
     Workflow,
