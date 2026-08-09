@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils";
 // import { motion } from "framer-motion";
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function LoginPage() {
   const [loading, setLoading] = useState(false);
@@ -92,7 +93,7 @@ export function LoginPage() {
                 "w-full flex items-center justify-center gap-2 hover:bg-gray-50"
               )}
             >
-              <a href="https://crm-backend-7lf9.onrender.com/api/auth/google">
+              <Link to="https://api.kyraitsolutions.com/api/auth/google">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -104,7 +105,7 @@ export function LoginPage() {
                   />
                 </svg>
                 Continue with Google
-              </a>
+              </Link>
             </Button>
 
             {/* Apple Login */}
