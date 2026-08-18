@@ -22,6 +22,7 @@ import Contact from "@/pages/Contact/contact.page";
 import Team from "@/pages/Team/team.page";
 import JobDetails from "@/pages/Career/job-details";
 import SalesAgent from "@/pages/SalesAgent/salesagent.page";
+import WhatsappQR from "@/pages/whatsappqr/whatsappqr.page";
 
 export const appRoutes = createBrowserRouter([
   {
@@ -39,8 +40,7 @@ export const appRoutes = createBrowserRouter([
       { path: "/product/whatsapp-marketing", element: <LeadCentrePage /> },
       { path: "/product/email-marketing", element: <LeadCentrePage /> },
       { path: "/product/whatsapp-forms", element: <LeadCentrePage /> },
-      { path: "/product/whatsapp-link-qr", element: <LeadCentrePage /> },
-      { path: "/product/whatsapp-link-qr", element: <LeadCentrePage /> },
+      { path: "/product/whatsapp-link-qr", element: <WhatsappQR /> },
       { path: "/pricing", element: <PricingPage /> },
       { path: "/terms", element: <TermsPage /> },
       { path: "/privacy-policy", element: <PrivacyPolicyPage /> },
