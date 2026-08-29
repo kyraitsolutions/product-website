@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Mail, MapPin, MessageSquare, Phone, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function ContactForm() {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -13,7 +14,7 @@ export default function ContactForm() {
 
   const [submitted, setSubmitted] = useState(false);
 
-  const services = ["Website", "Mobile Apps", "AI Chatbot", "CRM Solution", "Email Campaign", "Other"];
+  const services = ["WhatsApp Automation", "AI Chatbot", "CRM Software", "Website", "Mobile Apps", "Other"];
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -21,12 +22,13 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const token = "webhook_6943392a39813a85a44ae15676e570ec63021e124a1ad35e228eaf0511474af1";
+  const token = "webhook_c59087c314716a2637a3cdde7f049fe89bf001ecf63fb1d1e65595d928a35f0e";
   const handleSubmit = async (e: React.FormEvent) => {
+    setLoading(true);
 
     e.preventDefault();
     try {
-      const response = await fetch("https://crm-backend-7lf9.onrender.com/api/webhook/6a42922371e7bd775b43ccb7/lead", {
+      const response = await fetch("https://api.v1.kyraitsolutions.com/api/webhook/6a7c854242116e6531df0bcb/lead", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,7 +53,9 @@ export default function ContactForm() {
       const responseData = await response.json();
       console.log(responseData)
     } catch (error) {
-
+      console.error("Error submitting form:", error);
+    } finally {
+      setLoading(false);
     }
     console.log(formData);
     setSubmitted(true);
@@ -132,7 +136,7 @@ export default function ContactForm() {
                 </div>
 
 
-                <Link to="mailto:kyraitsolutions@gmail.com" className="text-sm text-muted-foreground">kyraitsolutions@gmail.com</Link>
+                <Link to="mailto:support@kyraitsolutions.com" className="text-sm text-muted-foreground">support@kyraitsolutions.com</Link>
               </div>
               <div className="bg-card rounded-xl p-5 border border-border hover:border-primary/30 transition-colors">
                 <div className="flex gap-2">
@@ -241,12 +245,22 @@ export default function ContactForm() {
                 </div>
 
                 {/* Submit */}
-                <button
-                  type="submit"
-                  className="w-full mt-4 py-3 rounded-lg bg-primary hover:bg-primary/80 text-white font-semibold transition"
-                >
-                  {submitted ? "Submitted Successfully!" : "Submit Request"}
-                </button>
+                {loading ? (
+                  <button
+                    type="submit"
+                    className="w-full mt-4 py-3 rounded-lg bg-primary hover:bg-primary/80 text-white font-semibold transition"
+                    disabled
+                  >
+                    Submitting...
+                  </button>
+                ) : (
+                  <button
+                    type="submit"
+                    className="w-full mt-4 py-3 rounded-lg bg-primary hover:bg-primary/80 text-white font-semibold transition"
+                  >
+                    {submitted ? "Submitted Successfully!" : "Submit Request"}
+                  </button>
+                )}
               </div>
             </form>
           </motion.div>
