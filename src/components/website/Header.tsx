@@ -93,7 +93,7 @@ const Header = () => {
                         <Button
                             onClick={() => {
                                 window.location.href =
-                                    "https://crm-backend-7lf9.onrender.com/api/auth/google";
+                                    "https://api.v1.kyraitsolutions.com/api/auth/google";
                                 // "http://localhost:3000/api/auth/google";
                             }}
                             className="text-gray-700 whitespace-nowrap hover:text-gray-900 text-sm font-medium px-4 py-2 rounded-lg  text-white hover:bg-gray-50 transition-colors"
@@ -103,7 +103,7 @@ const Header = () => {
                         <button
                             onClick={() => {
                                 window.location.href =
-                                    "https://crm-backend-7lf9.onrender.com/api/auth/google";
+                                    "https://api.v1.kyraitsolutions.com/api/auth/google";
                             }}
                             className="bg-primary hidden md:block  whitespace-nowrap hover:bg-primary/80 text-white text-sm font-medium px-6 py-2 rounded-lg transition-colors"
                         >
